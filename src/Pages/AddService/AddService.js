@@ -7,7 +7,7 @@ import './AddService.css'
 const AddService = () => {
     const { register, handleSubmit, formState: { errors } , reset} = useForm();
     const onSubmit = data => {
-        axios.post('http://localhost:5000/services', data)
+        axios.post('https://immense-sea-79132.herokuapp.com/services', data)
         .then(res=> {
             if(res.data?.insertedId){
                 alert("Data Added.. 😊");
